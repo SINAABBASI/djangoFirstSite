@@ -1,0 +1,20 @@
+
+{% extends "main/header.html" %}
+<!-- "block" is django tag but con is just name -->
+{% block con %}
+    <div class="row" style="background-color: transparent;">
+        {% for series, tutpart in tutPart.items %}
+            <div class="col s12 m6 l4">
+                <div class="card teal darken-2">
+                    <div class="card-content deep-orange-text text-accent-1">
+                        <span class="card-title">{{series.tutorial_series}}</span>
+                        <p>{{series.series_summary}}</p>
+                    </div>
+                    <div class="card-action">
+                    <a href= "{{tutpart}}">Visit</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
